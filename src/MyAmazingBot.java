@@ -51,7 +51,7 @@ public class MyAmazingBot extends TelegramLongPollingBot {
                 }
                 return;
             }
-            if(numOfDayOfWeek(messageText.toLowerCase()) <=
+            if(numOfDayOfWeek(messageText.toLowerCase()) <
                     numOfDayOfWeek(LocalDate.now().getDayOfWeek().toString().toLowerCase())){
                 message.setText("You can reserve starting from " + LocalDate.now().getDayOfWeek().toString() + " only");
                 if(LocalDateTime.now().getHour() >= 18){
